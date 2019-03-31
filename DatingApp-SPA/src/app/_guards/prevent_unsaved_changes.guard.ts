@@ -15,3 +15,4 @@ export class PreventUnsavedChanges implements CanDeactivate<MemberEditComponent>
     }
     return true;
 }
+}
