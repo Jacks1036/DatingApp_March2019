@@ -62,10 +62,9 @@ export class PhotoEditorComponent implements OnInit {
     };
   }
 
-  uploadAll() {
-   this.uploader.uploadAll();
-   this.uploader.queue.length = 0;
-  }
+  // uploadAll() {
+
+  // }
 
   setMainPhoto(photo: Photo) {
     this.userService.setMainPhoto(this.authService.decodedToken.nameid, photo.id).subscribe(() => {
