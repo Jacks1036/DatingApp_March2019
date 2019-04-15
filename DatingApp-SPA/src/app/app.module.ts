@@ -10,7 +10,7 @@ import {TimeAgoPipe} from 'time-ago-pipe';
 
 
 
-import { BsDropdownModule, TabsModule, BsDatepickerModule, PaginationModule, ButtonsModule } from 'ngx-bootstrap';
+import { BsDropdownModule, TabsModule, BsDatepickerModule, PaginationModule, ButtonsModule, ModalModule } from 'ngx-bootstrap';
 import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
 import { AuthService } from './_services/auth.service';
@@ -35,6 +35,12 @@ import { PhotoEditorComponent } from './members/photo-editor/photo-editor.compon
 import { LisstResolver } from './_resolvers/lists.resolver';
 import { MessagesResolver } from './_resolvers/messages.resolver';
 import { MemberMessagesComponent } from './members/member-messages/member-messages.component';
+import { AdminPanelComponent } from './Admin/admin-panel/admin-panel.component';
+import { HasRoleDirective } from './_directives/hasRole.directive';
+import { UserManagementComponent } from './Admin/user-management/user-management.component';
+import { PhotoManagementComponent } from './Admin/photo-management/photo-management.component';
+import { AdminService } from './_services/admin.service';
+import { RolesModalComponent } from './Admin/roles-modal/roles-modal.component';
 
 
 
@@ -57,7 +63,12 @@ export function tokenGetter() {
       MemberEditComponent,
       PhotoEditorComponent,
       TimeAgoPipe,
-      MemberMessagesComponent
+      MemberMessagesComponent,
+      AdminPanelComponent,
+      HasRoleDirective,
+      UserManagementComponent,
+      PhotoManagementComponent,
+      RolesModalComponent
    ],
    imports: [
       BrowserModule,
@@ -71,6 +82,7 @@ export function tokenGetter() {
       ButtonsModule.forRoot(),
       TabsModule.forRoot(),
       RouterModule.forRoot(appRoutes),
+      ModalModule.forRoot(),
       FileUploadModule,
       JwtModule.forRoot({
          config: {
@@ -91,7 +103,11 @@ export function tokenGetter() {
       MemberEditResolver,
       LisstResolver,
       MessagesResolver,
-      PreventUnsavedChanges
+      PreventUnsavedChanges,
+      AdminService
+   ],
+   entryComponents: [
+      RolesModalComponent
    ],
    bootstrap: [
       AppComponent

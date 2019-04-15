@@ -14,7 +14,7 @@ using Microsoft.Extensions.Options;
 
 namespace DatingApp.API.Controllers
 {
-    [Authorize]
+    // [Authorize]
     [Route("api/users/{userid}/photos")]
     [ApiController]
     public class PhotosController : ControllerBase
@@ -56,7 +56,7 @@ namespace DatingApp.API.Controllers
 
             if(userid != int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value))
             return Unauthorized();
-            var userFromRepo= await _repo.GetUser(userid);
+            var userFromRepo= await _repo.GetUser(userid,true);
             var file = photoForCreationDto.File;
             var uploadResult = new ImageUploadResult();
             if(file.Length >0 )
@@ -102,7 +102,7 @@ namespace DatingApp.API.Controllers
         {
              if(userId != int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value))
             return Unauthorized();
-            var userFromRepo= await _repo.GetUser(userId);
+            var userFromRepo= await _repo.GetUser(userId, true);
 
             if(!userFromRepo.Photos.Any(p => p.Id == id)){
                 return Unauthorized();
@@ -133,7 +133,7 @@ namespace DatingApp.API.Controllers
 
              if(userId != int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value))
             return Unauthorized();
-            var userFromRepo= await _repo.GetUser(userId);
+            var userFromRepo= await _repo.GetUser(userId,true);
 
             if(!userFromRepo.Photos.Any(p => p.Id == id)){
                 return Unauthorized();

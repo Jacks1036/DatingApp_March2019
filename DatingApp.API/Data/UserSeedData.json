@@ -1,6 +1,6 @@
 [
     {
-      "Username": "keerthi",
+      "Username": "Keerthi",
       "Gender": "female",
       "DateOfBirth": "1970-06-09",
       "Password": "password",
@@ -20,7 +20,7 @@
       ]
     },
     {
-      "Username": "anupama",
+      "Username": "Anupama",
       "Gender": "female",
       "DateOfBirth": "1977-06-22",
       "Password": "password",
@@ -40,7 +40,7 @@
       ]
     },
     {
-      "Username": "nabha natesh",
+      "Username": "Nabha_Natesh",
       "Gender": "female",
       "DateOfBirth": "1952-02-01",
       "Password": "password",
@@ -60,7 +60,7 @@
       ]
     },
     {
-      "Username": "samantha",
+      "Username": "Samantha",
       "Gender": "female",
       "DateOfBirth": "1971-08-05",
       "Password": "password",
@@ -80,7 +80,7 @@
       ]
     },
     {
-      "Username": "pavan kalyan",
+      "Username": "Pavan_Kalyan",
       "Gender": "male",
       "DateOfBirth": "1989-12-05",
       "Password": "password",
@@ -100,7 +100,7 @@
       ]
     },
             {
-          "Username": "prabhas",
+          "Username": "Prabhas",
           "Gender": "male",
           "DateOfBirth": "1971-06-10",
           "Password": "password",
@@ -120,7 +120,7 @@
           ]
         },
         {
-          "Username": "nani",
+          "Username": "Nani",
           "Gender": "male",
           "DateOfBirth": "1994-11-14",
           "Password": "password",
@@ -140,7 +140,7 @@
           ]
         },
         {
-          "Username": "rana daggupati",
+          "Username": "Rana",
           "Gender": "male",
           "DateOfBirth": "1985-04-13",
           "Password": "password",
@@ -160,7 +160,7 @@
           ]
         },
         {
-          "Username": "ram",
+          "Username": "Ram",
           "Gender": "male",
           "DateOfBirth": "1986-11-10",
           "Password": "password",
@@ -180,7 +180,7 @@
           ]
         },
         {
-          "Username": "mahesh",
+          "Username": "Mahesh",
           "Gender": "male",
           "DateOfBirth": "1981-09-14",
           "Password": "password",
